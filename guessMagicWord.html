@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>    MAGIC WORD GAME</title>
+   <style type="text/css">
+
+    #label{
+           background-color:yellow;
+           height: 90px;
+           width: 450px;
+           border-radius:100px;
+           margin-left:400px;
+           padding-left:35px;
+           padding-top:30px;
+
+    }
+    #MagicWord{
+      margin-left:170px;
+
+    }
+    #CheckMagicWord{
+      padding-left:170px;
+      padding-right:190px;
+    }
+    #hint{
+       margin-left: 500px;
+
+       background-color: green;
+       width: 380px;
+       border-radius: 100px;
+
+
+
+
+    }
+    #field{
+      margin-left: 400px;
+
+
+
+    }
+    #button{
+       margin-left: 450px;
+
+
+    }
+
+   </style>
+  </head>
+
+  <body>
+<p><h1 id="label">THE MAGIC WORD GAME</h1></p>
+<p id="field"><input type="text" name="" value="" id="MagicWord" ></p>
+
+<p id="button"><button type="button" name="button" id="CheckMagicWord">Check it!!</button></p>
+
+<p><h1 id="hint">HINT: <span style =color:red>use my first name</span></h1></p>
+
+<script type="text/javascript">
+
+ document.getElementById("CheckMagicWord").onclick = function(){
+
+ var MagicwordEntered = document.getElementById("MagicWord").value;
+  var magicword = "sameer";
+
+  if (magicword == MagicwordEntered) {
+    alert("yes you got it");
+
+  }
+  else {
+    alert("Better luck next time");
+  }
+
+
+ }
+
+</script>
+
+
+
+  </body>
+</html>
