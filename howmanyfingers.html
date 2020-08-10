@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>How MAny FIngers</title>
+
+  </head>
+
+  <body>
+    <p><h1>GUESS HOW MANY FINGERS IS UP OF MINE</h1></p>
+<input type="text" name="" value="" id="textentered">
+<br>
+<button type="" name="button" id="button">GUESS!</button>
+
+<script type="text/javascript">
+
+document.getElementById('button').onclick = function() {
+
+  var randomnumber = (Math.floor(Math.random()*6));
+
+if (document.getElementById('textentered').value == randomnumber) {
+
+  alert("yes u got it");
+
+}
+else {
+  alert("try again the number is" + randomnumber)
+}
+
+
+}
+
+</script>
+
+  </body>
+
+</html>
