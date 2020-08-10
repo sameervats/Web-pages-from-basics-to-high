@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<title> FINAL PROJECT</title>
+<style type="text/css">
+#square{
+        height:200px;
+        width:200px;
+        background-color:red;
+        display: none;
+        position: relative;
+
+
+
+}
+
+
+</style>
+
+  </head>
+      <body>
+        <h1>TEST YOUR REACTIONS</h1>
+        <p>Click the boxes and circles as fast as much you can</p>
+        <p>Your time:<span id ="timeTaken"></span></p>
+     <p id ="square"></p>
+
+             <script type="text/javascript">
+
+               var start = new Date().getTime();
+
+
+               function getRandomColor(){
+               var letters = '0123456789ABCDEF'.split('');
+               var color = '#';
+               for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+               }
+               return color;
+
+               }
+
+               function makesobjectappear(){
+
+                  var left = Math.random() *490;
+                  var top =Math.random() *470;
+                  var height =Math.random() *470;
+                  var width =Math.random() *470;
+
+                  if (Math.random()>0.5) {
+                    document.getElementById('square').style.borderRadius = "50%";
+
+                  }
+                  else {
+                    document.getElementById('square').style.borderRadius = "0";
+                  }
+
+                  document.getElementById('square').style.backgroundColor = getRandomColor();
+                  document.getElementById('square').style.left = left +'px';
+                  document.getElementById('square').style.top = top +'px';
+                  document.getElementById('square').style.height = height +'px';
+                  document.getElementById('square').style.width = width +'px';
+                 document.getElementById('square').style.display = "block";
+
+
+
+                  start = new Date().getTime();
+               }
+
+                function appearafterdelay(){
+
+                setTimeout(makesobjectappear,Math.random()*2000);
+              }
+                appearafterdelay();
+                document.getElementById('square').onclick = function(){
+
+                document.getElementById('square').style.display = "none";
+                var end = new Date().getTime();
+                var timeTaken = (end - start)/1000;
+                document.getElementById('timeTaken').innerHTML =timeTaken +"s"
+
+                  appearafterdelay();
+                 }
+
+
+
+
+
+
+
+             </script>
+
+
+      </body>
+</html>
